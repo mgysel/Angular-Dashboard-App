@@ -1,0 +1,19 @@
+<h1>Mike</h1>
+<ui-gmap-google-map center='map.center' zoom='map.zoom' class="angular-google-map-container" options="options">
+	<ui-gmap-marker ng-repeat="m in map.markers" coords="m" icon="m.icon" idkey="m.id" ng-click="'onClicked'">
+		<ui-gmap-window>
+			<div>
+				<strong>{{ m.id }}: </strong>
+				<span>{{ m.employees }} employees</span>
+			</div>
+		</ui-gmap-window>
+	</ui-gmap-marker>
+</ui-gmap-google-map>
+
+
+
+
+
+
+
+
