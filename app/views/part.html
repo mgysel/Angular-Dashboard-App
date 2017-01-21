@@ -1,5 +1,4 @@
-<h1>Mike</h1>
-<ui-gmap-google-map center='map.center' zoom='map.zoom' class="angular-google-map-container" options="options">
+<ui-gmap-google-map center='map.center' zoom='map.zoom' class="angular-google-map-container" id="map" options="options">
 	<ui-gmap-marker ng-repeat="m in map.markers" coords="m" icon="m.icon" idkey="m.id" ng-click="'onClicked'">
 		<ui-gmap-window>
 			<div>

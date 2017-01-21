@@ -1,8 +1,12 @@
 <div id="open-issues" class="text-center">Open Issues: {{ openIssues }}</div>
-<canvas id="line" class="chart chart-line" chart-data="data1"
-chart-labels="labels1" chart-series="series1" chart-options="options1"
-chart-dataset-override="datasetOverride1" chart-click="onClick">
-</canvas>
-<canvas id="bar" class="chart chart-bar"
-  chart-data="data2" chart-labels="labels2"> chart-series="series"
-</canvas>
+<div id="paying-customers" class="section">
+	<canvas id="line" class="chart chart-line section" chart-data="data1"
+	chart-labels="labels1" chart-series="series1" chart-options="options1"
+	chart-dataset-override="datasetOverride1" chart-click="onClick" style="height: 50vh; width: 100%;">
+	</canvas>
+</div>
+<div id="reported-issues" class="section">
+	<canvas id="bar" class="chart chart-bar section"
+	  chart-data="data2" chart-labels="labels2" style="height: 50vh; width: 100%;"> chart-series="series"
+	</canvas>
+</div>

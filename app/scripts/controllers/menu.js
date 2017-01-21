@@ -9,11 +9,6 @@
  */
 angular.module('udaciMealsApp')
   .controller('MenuCtrl', function ($scope) {
-    // this.awesomeThings = [
-    //   'HTML5 Boilerplate',
-    //   'AngularJS',
-    //   'Karma'
-    // ];
    		$scope.part1 = function() {
    			$(".part1Container").show();
    			$(".part2Container").hide();

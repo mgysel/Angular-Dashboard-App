@@ -7,15 +7,6 @@
  * # Part2Ctrl
  * Controller of the udaciMealsApp
  */
-// angular.module('udaciMealsApp')
-//   .controller('Part2Ctrl', function () {
-//     this.awesomeThings = [
-//       'HTML5 Boilerplate',
-//       'AngularJS',
-//       'Karma'
-//     ];
-//   });
-
 angular.module('udaciMealsApp', ["chart.js"]).controller("Part2Ctrl", function ($scope, $interval) {
 
   // Open Issues

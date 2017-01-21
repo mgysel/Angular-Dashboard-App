@@ -1,7 +1,86 @@
-.angular-google-map-container {
-        height: 400px;
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
 }
 
+body {
+  padding: 0;
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+}
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 40px;
+  padding-bottom: 19px;
+}
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
 
 .browsehappy {
   margin: 0.2em 0;
@@ -85,4 +164,226 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+
+
+
+
+
+/* OMNIPOTENT STYLING */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fafafa;
+}
+
+.nav, .header, .background-image .footer {
+  border: 1px solid black;
+}
+
+label {
+  font-weight: normal;
+}
+
+
+
+
+
+
+
+/* NAV/FOOTER */
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  height: 48px;
+  padding: 4px 20px;
+  color: #FFF;
+  background-color: #333333;
+}
+
+.nav-img {
+  width: 50px;
+  height: auto;
+}
+
+.nav-tab {
+  color: #fff;
+}
+
+/* Footer bar at bottom */
+.footers {
+  height: 38px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #333333;
+  border: 1px solid black;
+  z-index: 2;
+  margin-top: 38.8%;
+}
+
+
+
+
+
+
+/* SECTION 1 */
+
+.section-1 {
+  display: block;
+}
+
+/* Employee Map */
+#map {
+  height: 75vh;
+  margin: 50px 20px 0 20px;
+  margin-top: calc((25vh - 48px - 38px)/2);
+  /*padding-left: 5%;*/
+}
+/*
+.angular-google-map-container {
+        height: 400px;
+}*/
+
+
+
+
+
+
+
+/* SECTION 2 */
+
+.section-2 {
+  display: none;
+}
+
+#open-issues {
+  width: 300px;
+  padding: 15px 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: calc((100% - 300px)/2);
+  border: 1px solid #000;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+
+.section {
+  display: inline-block;
+  border: 1px solid #000;
+  width: 45%;
+}
+
+#reported-issues {
+  margin-left: 3.333%;
+}
+
+#paying-customers {
+  margin-left: calc(3.333% - 2px);
+}
+
+
+
+
+
+
+/* SECTION 3 */
+
+.section-3 {
+  display: none;
+}
+
+/* Show Entries */
+.dataTables_length {
+  display: none;
+}
+
+/* Search Input */
+#DataTables_Table_0_filter label {
+  margin-left: calc((100% - 300px)/2);
+  font-size: 0;
+}
+
+#DataTables_Table_0_filter input {
+  display: block;
+  width: 300px;
+  height: 45px;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-size: 18px;
+  text-indent: 8px;
+}
+
+#DataTables_Table_0_filter::placeholder {
+  padding-left: 1px;
+  font-size: 18px;
+}
+
+/*
+.search {
+  width: 300px;
+  height: 45px;
+  margin-top: 20px;
+  border-radius: 7px;
+  font-size: 18px;
+  text-indent: 8px;
+}
+
+.search::placeholder {
+  padding-left: 1px;
+  font-size: 18px;
+}*/
+
+
+/* Issues Table */
+table {
+  border: 1px solid black;
+  margin-bottom: 60px;
+}
+
+th {
+  border: 1px solid black;
+  height: 35px;
+  padding-left: 5px;
+}
+
+td {
+  border: 1px solid black;
+  height: 50px;
+  padding-left: 5px;
+}
+
+.table-issues {
+  margin-top: 15px;
+  margin-left: 2.5%;
+  width: 95%;
+}
+
+#table-header-name {
+  width: 11%;
+}
+
+#table-header-email {
+  width: 15%;
+}
+
+#table-header-description {
+  width: 35%;
+}
+
+#table-header-employee {
+  width: 11%;
+}
+
+#table-header-status {
+  width: 9%;
+}
+
+#table-header-submitted {
+  width: 9%;
+}
+
+#table-header-closed {
+  width: 9%;
 }
