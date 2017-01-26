@@ -84,7 +84,7 @@ angular.module('udaciMealsApp', ['uiGmapgoogle-maps'])
 
         $scope.map = map1;
 		$interval(function(){
-			if ($scope.map == map1) {
+			if ($scope.map === map1) {
 		  		$scope.map = map2;
 			} else {
 		  		$scope.map = map1;
@@ -99,7 +99,7 @@ angular.module('udaciMealsApp', ['uiGmapgoogle-maps'])
             }
 	    };
 
-		angular.forEach($scope.map.markers, function (location) {
+		angular.forEach($scope.map.markers, function () {
 
 		});
 
@@ -213,4 +213,4 @@ angular.module('udaciMealsApp', ['uiGmapgoogle-maps'])
 			styles: styles
 		};
 
-    })
+    });

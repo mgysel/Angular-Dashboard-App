@@ -7,14 +7,14 @@
  * # Part2Ctrl
  * Controller of the udaciMealsApp
  */
-angular.module('udaciMealsApp', ["chart.js"]).controller("Part2Ctrl", function ($scope, $interval) {
+angular.module('udaciMealsApp', ['chart.js']).controller('Part2Ctrl', function ($scope, $interval) {
 
   // Open Issues
   var issues1 = 10;
   var issues2 = 14;
   $scope.openIssues = issues1;
   $interval(function(){
-    if ($scope.openIssues == issues1) {
+    if ($scope.openIssues === issues1) {
       $scope.openIssues = issues2;
     } else {
       $scope.openIssues = issues1;
@@ -22,7 +22,7 @@ angular.module('udaciMealsApp', ["chart.js"]).controller("Part2Ctrl", function (
   }, 2000);
 
   // Line Graph
-  $scope.labels1 = ["January", "February", "March", "April", "May", "June", "July"];
+  $scope.labels1 = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   $scope.series1 = ['Paying Customers'];
   var data1 = [
     [[1212, 1582, 2217, 3124, 4518, 4473, 4722]],
@@ -30,7 +30,7 @@ angular.module('udaciMealsApp', ["chart.js"]).controller("Part2Ctrl", function (
   ];
   $scope.data1 = data1[0];
   $interval(function(){
-    if ($scope.data1 == data1[0]) {
+    if ($scope.data1 === data1[0]) {
       $scope.data1 = data1[1];
     } else {
       $scope.data1 = data1[0];
@@ -54,7 +54,7 @@ angular.module('udaciMealsApp', ["chart.js"]).controller("Part2Ctrl", function (
   };
 
   // Bar Graph
-  $scope.labels2 = ["January", "February", "March", "April", "May", "June", "July"];
+  $scope.labels2 = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
   $scope.series2 = ['Reported Issues'];
 
   var data2 = [
@@ -63,7 +63,7 @@ angular.module('udaciMealsApp', ["chart.js"]).controller("Part2Ctrl", function (
   ];
   $scope.data2 = data2[0];
   $interval(function(){
-    if ($scope.data2 == data2[0]) {
+    if ($scope.data2 === data2[0]) {
       $scope.data2 = data2[1];
     } else {
       $scope.data2 = data2[0];

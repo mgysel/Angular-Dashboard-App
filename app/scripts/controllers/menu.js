@@ -10,18 +10,18 @@
 angular.module('udaciMealsApp')
   .controller('MenuCtrl', function ($scope) {
    		$scope.part1 = function() {
-   			$(".part1Container").show();
-   			$(".part2Container").hide();
-   			$(".part3Container").hide();
+   			// $(".part1Container").show();
+   			// $(".part2Container").hide();
+   			// $(".part3Container").hide();
    		};
    		$scope.part2 = function() {
-   			$(".part1Container").hide();
-   			$(".part2Container").show();
-   			$(".part3Container").hide();
+   			// $(".part1Container").hide();
+   			// $(".part2Container").show();
+   			// $(".part3Container").hide();
    		};
    		$scope.part3 = function() {
-   			$(".part1Container").hide();
-   			$(".part2Container").hide();
-   			$(".part3Container").show();
+   			// $(".part1Container").hide();
+   			// $(".part2Container").hide();
+   			// $(".part3Container").show();
    		};
   });
