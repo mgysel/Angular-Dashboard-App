@@ -9,4 +9,4 @@
  * Main module of the application.
  */
 angular
-	.module('udaciMealsApp', []);
+	.module('udaciMealsApp', ['chart.js', 'uiGmapgoogle-maps']);

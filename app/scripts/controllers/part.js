@@ -7,89 +7,22 @@
  * # PartCtrl
  * Controller of the udaciMealsApp
  */
-angular.module('udaciMealsApp', ['uiGmapgoogle-maps'])
+angular.module('udaciMealsApp')
     .controller('PartCtrl', function($scope, $interval) {
-
-        var map1 = {
-            center: {
-                latitude: 56.162939,
-                longitude: -118.2437
-            },
-            zoom: 1,
-            markers: [
-            {
-                id: 'Los Angeles',
-                latitude:  -34.0522,
-                longitude:-71.0363168884369,
-                employees: 223
-            },
-            {
-                id: 'New York City',
-                latitude:  40.7128,
-                longitude:-74.0059,
-                employees: 123
-            }, {
-                id: 'Berlin',
-                latitude:   52.5200,
-                longitude: 13.4050,
-                employees: 2123
-            }, {
-                id: 'Melbourne',
-                latitude:  -37.8136,
-                longitude: 144.9631,
-                employees: 113
-            }, {
-                id: 'Barcelona',
-                latitude:  41.3851,
-                longitude: 2.1734,
-                employees: 43
-            }]
-        };
-
-        var map2 = {
-            center: {
-                latitude: 56.162939,
-                longitude: -118.2437
-            },
-            zoom: 1,
-            markers: [
-            {
-                id: 'Los Angeles',
-                latitude:  -34.0522,
-                longitude:-71.0363168884369,
-                employees: 323
-            },
-            {
-                id: 'New York City',
-                latitude:  40.7128,
-                longitude:-74.0059,
-                employees: 203
-            }, {
-                id: 'Berlin',
-                latitude:   52.5200,
-                longitude: 13.4050,
-                employees: 2223
-            }, {
-                id: 'Melbourne',
-                latitude:  -37.8136,
-                longitude: 144.9631,
-                employees: 114
-            }, {
-                id: 'Barcelona',
-                latitude:  41.3851,
-                longitude: 2.1734,
-                employees: 49
-            }]
-        };
-
-        $scope.map = map1;
-		$interval(function(){
-			if ($scope.map === map1) {
-		  		$scope.map = map2;
-			} else {
-		  		$scope.map = map1;
-			}
-		}, 2000);
+    	$.get("data/map_data1.json", function(data) {
+    		var map1 = data;
+    		$scope.map = map1;
+    		$.get("data/map_data2.json", function(data) {
+    			var map2 = data;
+				$interval(function(){
+					if ($scope.map === map1) {
+				  		$scope.map = map2;
+					} else {
+				  		$scope.map = map1;
+					}
+				}, 2000);
+    		})
+    	});
 
 	    $scope.marker = {
 	        id: 1,
@@ -98,11 +31,6 @@ angular.module('udaciMealsApp', ['uiGmapgoogle-maps'])
                 longitude: 10.203921
             }
 	    };
-
-		angular.forEach($scope.map.markers, function () {
-
-		});
-
 
     	var styles = [
 		    {

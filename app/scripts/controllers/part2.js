@@ -7,7 +7,7 @@
  * # Part2Ctrl
  * Controller of the udaciMealsApp
  */
-angular.module('udaciMealsApp', ['chart.js']).controller('Part2Ctrl', function ($scope, $interval) {
+angular.module('udaciMealsApp').controller('Part2Ctrl', function ($scope, $interval, $http) {
 
   // Open Issues
   var issues1 = 10;
@@ -20,6 +20,19 @@ angular.module('udaciMealsApp', ['chart.js']).controller('Part2Ctrl', function (
       $scope.openIssues = issues1;
     }
   }, 2000);
+
+  var dataCSV;
+  var data1 = [[],[]];
+  var data2 = [[],[]];
+  $http.get('data/mock_data_part2.csv').then(function(response) {
+    dataCSV = Papa.parse(response.data);
+    for (var i=1; i<dataCSV.length; i++) {
+      data1[0].push(dataCSV[i][0]);
+      data1[1].push(dataCSV[i][1]);
+      data2[0].push(dataCSV[i][2]);
+      data2[1].push(dataCSV[i][3]);
+    }
+  })
 
   // Line Graph
   $scope.labels1 = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];

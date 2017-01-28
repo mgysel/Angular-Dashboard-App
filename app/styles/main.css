@@ -203,13 +203,15 @@ label {
   background-color: #333333;
 }
 
-.nav-img {
-  width: 50px;
-  height: auto;
-}
-
 .nav-tab {
   color: #fff;
+  padding: 0;
+}
+
+.nav-tab-part1 {
+  font-weight: bold;
+  color: #333333;
+  background-color: #f1f1f1;
 }
 
 /* Footer bar at bottom */
@@ -221,6 +223,22 @@ label {
   border: 1px solid black;
   z-index: 2;
   margin-top: 38.8%;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 425px) {
+  .nav li {
+    padding: 0;
+  }
+  .nav li a {
+    padding: 0;
+    vertical-align: middle;
+  }
+  .nav-tab {
+    font-size: 13px;
+    width: 28vw;
+    height: 42px;
+  }
 }
 
 
@@ -236,15 +254,15 @@ label {
 
 /* Employee Map */
 #map {
-  height: 75vh;
-  margin: 50px 20px 0 20px;
+  margin: 0 20px 0 20px;
   margin-top: calc((25vh - 48px - 38px)/2);
   /*padding-left: 5%;*/
 }
-/*
+
 .angular-google-map-container {
-        height: 400px;
-}*/
+/*  height: calc(100vh);*/
+  height: 80vh;
+}
 
 
 
@@ -253,6 +271,10 @@ label {
 
 
 /* SECTION 2 */
+
+.part2Container {
+  display: none;
+}
 
 .section-2 {
   display: none;
@@ -266,7 +288,6 @@ label {
   margin-left: calc((100% - 300px)/2);
   border: 1px solid #000;
   border-radius: 5px;
-  vertical-align: middle;
 }
 
 .section {
@@ -283,6 +304,79 @@ label {
   margin-left: calc(3.333% - 2px);
 }
 
+#line {
+  padding: 10px;
+}
+
+#bar {
+  padding: 10px;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 1000px) {
+  #paying-customers {
+    margin-left: 10%;
+    width: 80%;
+  }
+  #line {
+    width: 70%;
+  }
+  #reported-issues {
+    margin-left: 10%;
+    width: 80%;
+    margin-top: 15px;
+  }
+  #bar {
+    width: 70%;
+  }
+}
+@media (max-width: 750px) {
+  #paying-customers {
+    margin-left: 5%;
+    width: 90%;
+  }
+  #line {
+    width: 100%;
+  }
+  #reported-issues {
+    margin-left: 5%;
+    width: 90%;
+    margin-top: 15px;
+  }
+  #bar {
+    width: 100%;
+  }
+  #open-issues {
+    width: 220px;
+    padding: 10px 10px;
+    margin-left: calc((100% - 220px)/2);
+  }
+}
+@media (max-width: 500px) {
+  #paying-customers {
+    margin-left: 2.5%;
+    width: 95%;
+  }
+  #line {
+    width: 100%;
+  }
+  #reported-issues {
+    margin-left: 2.5%;
+    width: 95%;
+    margin-top: 8px;
+  }
+  #bar {
+    width: 100%;
+  }
+  #open-issues {
+    width: 220px;
+    padding: 7px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: calc((100% - 220px)/2);
+  }
+}
+
 
 
 
@@ -290,8 +384,12 @@ label {
 
 /* SECTION 3 */
 
-.section-3 {
+.part3Container {
   display: none;
+}
+
+.section-3 {
+  display: block;
 }
 
 /* Show Entries */
@@ -320,11 +418,11 @@ label {
   font-size: 18px;
 }
 
-/*
 .search {
   width: 300px;
   height: 45px;
-  margin-top: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-radius: 7px;
   font-size: 18px;
   text-indent: 8px;
@@ -333,7 +431,7 @@ label {
 .search::placeholder {
   padding-left: 1px;
   font-size: 18px;
-}*/
+}
 
 
 /* Issues Table */
@@ -386,4 +484,11 @@ td {
 
 #table-header-closed {
   width: 9%;
+}
+
+/*Media Queries*/
+@media (max-width: 800px) {
+  html, body {
+    overflow-x: scroll;
+  }
 }

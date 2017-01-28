@@ -1,0 +1,35 @@
+{
+"center": {
+    "latitude": 16,
+    "longitude": 36
+},
+"zoom": 2,
+"markers": [
+{
+    "id": "'Los Angeles'",
+    "latitude":  -34.0522,
+    "longitude":-71.0363168884369,
+    "employees": 223
+},
+{
+    "id": "'New York City'",
+    "latitude":  40.7128,
+    "longitude":-74.0059,
+    "employees": 123
+}, {
+    "id": "'Berlin'",
+    "latitude":   52.5200,
+    "longitude": 13.4050,
+    "employees": 2123
+}, {
+    "id": "'Melbourne'",
+    "latitude":  -37.8136,
+    "longitude": 144.9631,
+    "employees": 113
+}, {
+    "id": "'Barcelona'",
+    "latitude":  41.3851,
+    "longitude": 2.1734,
+    "employees": 43
+}]
+}
